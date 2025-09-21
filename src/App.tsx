@@ -1,5 +1,3 @@
-// import { BrowserRouter } from "react-router-dom"
-// import GlobalStyles from "styles/GlobalStyles";
 
 
 //Lessons
@@ -12,8 +10,7 @@ import Homework_16 from "homeworks/Homework_16/Homework_16";
 function App() {
   return (
      <>
-   {/* <BrowserRouter> */}
-   {/* <GlobalStyles /> */}
+  
   
   {/* lessons */}
   {/* <Lesson_16 /> */}
@@ -21,7 +18,7 @@ function App() {
    {/* homeworks */}
   <Homework_16 />
 
-   {/* </BrowserRouter> */}
+ 
   </>
   )
 }
