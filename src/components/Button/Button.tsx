@@ -16,7 +16,7 @@ function Button({
       onClick={onClick}
       type={type}
     >
-      {/* Улосвный рендеринг */}
+      {/* Условный рендеринг */}
       {!children && name}
       {children}
     </ButtonComponent>

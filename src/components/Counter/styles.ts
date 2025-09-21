@@ -1,22 +1,27 @@
-.counter_wrapper {
+import styled from "@emotion/styled";
+
+export const CounterWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  width: 400px;
+  min-width: 400px;
+  max-width: fit-content;
   height: fit-content;
   border: 1px solid black;
   background-color: white;
   color: black;
   padding: 20px;
   border-radius: 10px;
-}
+`;
 
-.button_control {
-  width: 100px;
-}
+export const ButtonControl = styled.div`
+  min-width: 100px;
+  max-width: 100px;
+  
+`;
 
-.count {
+export const Count = styled.p`
   font-size: 40px;
   font-weight: bold;
-}
+`;
