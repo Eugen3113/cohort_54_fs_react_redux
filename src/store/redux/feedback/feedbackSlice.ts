@@ -1,18 +1,15 @@
 import { createAppSlice } from "store/createAppSlice"
+import { FeedbackState } from "./types"
 
-interface FeedbackState {
-  like: number
-  dislike: number
-}
 
-const initialState: FeedbackState = {
+const feedbackInitialState: FeedbackState = {
   like: 0,
   dislike: 0,
 }
 
 export const feedbackSlice = createAppSlice({
   name: "FEEDBACK",
-  initialState,
+  initialState: feedbackInitialState,
   reducers: create => ({
     incrementLike: create.reducer((state: FeedbackState) => {
       state.like += 1
