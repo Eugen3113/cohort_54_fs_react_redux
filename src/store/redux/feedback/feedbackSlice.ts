@@ -21,6 +21,8 @@ export const feedbackSlice = createAppSlice({
       state.like = 0
       state.dislike = 0
     }),
+      // так проще
+    // resetFeedback: create.reducer(() => feedbackInitialState),
   }),
 })
 
