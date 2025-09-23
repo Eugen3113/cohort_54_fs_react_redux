@@ -1,31 +1,39 @@
 import { createAppSlice } from "store/createAppSlice"
-import { FeedbackState } from "./types"
 
+import { FeedbackInitialState } from "./types"
 
-const feedbackInitialState: FeedbackState = {
-  like: 0,
-  dislike: 0,
+const feedbackInitialState: FeedbackInitialState = {
+  likes: 0,
+  dislikes: 0,
 }
 
 export const feedbackSlice = createAppSlice({
   name: "FEEDBACK",
   initialState: feedbackInitialState,
   reducers: create => ({
-    incrementLike: create.reducer((state: FeedbackState) => {
-      state.like += 1
+    like: create.reducer((state: FeedbackInitialState) => {
+      state.likes = state.likes + 1
     }),
-    incrementDislike: create.reducer((state: FeedbackState) => {
-      state.dislike += 1
+    dislike: create.reducer((state: FeedbackInitialState) => {
+      state.dislikes = state.dislikes + 1
     }),
-    resetFeedback: create.reducer((state: FeedbackState) => {
-      state.like = 0
-      state.dislike = 0
-    }),
-      // так проще
-    // resetFeedback: create.reducer(() => feedbackInitialState),
+    // resetResults: create.reducer((state: FeedbackInitialState) => {
+    //   state.dislikes = 0
+    //   state.likes = 0
+    // }),
+    resetResults: create.reducer(() => feedbackInitialState),
   }),
+  selectors: {
+    likes: (state: FeedbackInitialState) => {
+      return state.likes
+    },
+    dislikes: (state: FeedbackInitialState) => {
+      return state.dislikes
+    },
+  },
 })
 
-export const { incrementLike, incrementDislike, resetFeedback } =
-  feedbackSlice.actions
-export default feedbackSlice.reducer
+export const feedbackSliceActions = feedbackSlice.actions
+
+export const feedbackSliceSelectors = feedbackSlice.selectors
+

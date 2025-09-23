@@ -1,4 +1,5 @@
-export interface FeedbackState {
-  like: number
-  dislike: number
+export interface FeedbackInitialState {
+  likes: number
+  dislikes: number
 }
+
