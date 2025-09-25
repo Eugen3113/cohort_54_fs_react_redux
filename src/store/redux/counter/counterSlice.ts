@@ -7,7 +7,7 @@ import { CounterSliceState } from "./types"
 const counterInitialState: CounterSliceState = {
   count: 0,
 }
-
+   // createAppSlice -содержит 3 обязательных КЛЮЧА- name:, iniutialState:, reducers: и 1 необязательный selctors:  .  
 export const counterSlice = createAppSlice({
   // name - это имя для slice, имя используется для нахождения событий слайса в redux devtools
   name: "COUNTER",
